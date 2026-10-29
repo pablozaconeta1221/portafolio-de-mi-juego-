@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#10090b" />
+  <meta name="description" content="Carrera Infinita 3D: Ciudad Sangrienta. Corre por una ciudad distópica abandonada, esquiva obstáculos y sobrevive." />
+  <title>CIUDAD SANGRIENTA | Carrera Infinita 3D</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="blood-top" aria-hidden="true"></div>
+  <header class="header" id="inicio">
+    <a class="brand" href="#inicio" aria-label="Ciudad Sangrienta - inicio"><span class="brand-mark">✕</span> CIUDAD<span>SANGRIENTA</span><small>// RUNNER 3D</small></a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Menú principal">
+      <a href="#historia">Historia</a><a href="#personaje">Personaje</a><a href="#mecanicas">Mecánicas</a><a href="#datos">Datos</a><a class="nav-play" href="#jugar" data-launch-game>Jugar ahora ↓</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" aria-labelledby="hero-title">
+      <div class="city-bg"></div><div class="hero-red-glow"></div>
+      <div class="container hero-layout">
+        <div class="hero-text reveal">
+          <p class="eyebrow"><span class="status-dot"></span> EXPEDIENTE 001 <span class="divider-line">/</span> UNITY WEBGL <span class="divider-line">/</span> ENDLESS RUNNER 3D</p>
+          <h1 id="hero-title">LA CIUDAD<br><span class="blood-text">SANGRIENTA</span></h1>
+          <p class="hero-sub">CORRE. ESQUIVA. SOBREVIVE.</p>
+          <p class="lead">Las calles están vacías. Las luces se apagan. Y el peligro nunca deja de perseguirte. Una carrera interminable por una ciudad distópica al borde del colapso.</p>
+          <div class="hero-actions"><a class="btn btn-primary" href="#jugar" data-launch-game>▶ COMENZAR A JUGAR</a><a class="btn btn-ghost" href="#historia">DESCUBRIR LA HISTORIA ↓</a></div>
+          <div class="mini-stats"><div><b>3D</b><span>ENTORNO</span></div><div><b>2</b><span>ACCIONES</span></div><div><b>∞</b><span>SUPERVIVENCIA</span></div></div>
+        </div>
+        <div class="hero-art reveal" aria-label="Ilustración del protagonista"><div class="hazard-circle"></div><img src="assets/protagonista.png" alt="Protagonista de cabello verde, sonrisa inquietante, chaleco oscuro y botas"/><div class="art-serial">SUJETO // 001<br>ESTADO: EN FUGA</div><div class="art-stamp">NO MIRES<br>ATRÁS</div></div>
+      </div><div class="hero-footer"><span>▰ SEÑAL DE EMERGENCIA / ZONA RESTRINGIDA</span><span>DESPLÁZATE PARA EXPLORAR ↓</span></div>
+    </section>
+
+    <section id="historia" class="section story-section"><div class="container">
+      <div class="section-heading reveal"><span class="section-no">01 / HISTORIA</span><h2>UNA CIUDAD <em>SIN SALIDA.</em></h2><p>Una historia de supervivencia entre avenidas desiertas, luces rojas y una amenaza que se acerca con cada segundo.</p></div>
+      <div class="story-layout"><div class="story-visual reveal"><img src="assets/ciudad-desolada.svg" alt="Ilustración de una avenida nocturna desolada con edificios destruidos y niebla roja"/><span class="image-caption">ARCHIVO VISUAL // SECTOR CERO</span></div><div class="chapters reveal"><article><small>CAPÍTULO 01 / EL SILENCIO</small><h3>La última avenida</h3><p>El corredor aparece solo en una ciudad urbana distópica. Los edificios se levantan sobre calles abandonadas y las señales de alarma anuncian que la zona ya no es segura.</p></article><article><small>CAPÍTULO 02 / LA PERSECUCIÓN</small><h3>No hay tiempo para detenerse</h3><p>Su única opción es avanzar. Barricadas, cajas y estructuras elevadas surgen inesperadamente en el camino. Cada obstáculo exige una reacción inmediata.</p></article><article><small>CAPÍTULO 03 / RESISTENCIA</small><h3>Sobrevive un segundo más</h3><p>La carrera se acelera; esquivar se vuelve más difícil. El objetivo es sobrevivir el mayor tiempo posible, acumular puntos y superar el récord.</p></article><article><small>CAPÍTULO 04 / DESTINO</small><h3>La ciudad decide</h3><p>Si se agotan las vidas, la carrera termina. Si el corredor resiste, su puntuación seguirá creciendo y podrá marcar una nueva hazaña.</p></article></div></div>
+    </div></section>
+
+    <section id="personaje" class="section character-section"><div class="container"><div class="section-heading reveal"><span class="section-no">02 / PROTAGONISTA</span><h2>EL ROSTRO DEL <em>CAOS.</em></h2><p>Un corredor imposible de confundir: una sonrisa perturbadora, cabello verde eléctrico y el instinto de seguir adelante.</p></div>
+      <div class="character-grid"><div class="character-img reveal"><span class="portrait-code">SUJETO 001 / CLASIFICADO</span><img src="assets/protagonista.png" alt="Modelo visual del protagonista de estilo cartoon 3D"/><span class="portrait-bottom">CORREDOR URBANO // ESTADO ACTIVO</span></div><div class="character-info reveal"><span class="red-tag">FICHA DEL SUJETO</span><h3>EL CORREDOR<br><span>DE LA CIUDAD</span></h3><p>Un personaje de estética <strong>Cartoon 3D</strong> que contrasta con la oscuridad del escenario. Su cabellera verde, el rostro expresivo, el chaleco, los pantalones cargo y las botas construyen una silueta reconocible en plena carrera.</p><div class="profile-row"><span>ROL</span><b>Protagonista / corredor urbano</b></div><div class="profile-row"><span>HABILIDADES</span><b>Correr, saltar y agacharse</b></div><div class="profile-row"><span>ESTILO</span><b>Cartoon 3D / terror urbano</b></div><div class="profile-row"><span>OBJETIVO</span><b>Sobrevivir y romper el récord</b></div><p class="note">Arte del protagonista proporcionado por el equipo.</p></div></div>
+    </div></section>
+
+    <section id="mecanicas" class="section mechanics-section"><div class="container"><div class="section-heading reveal"><span class="section-no">03 / MECÁNICAS</span><h2>CADA SEGUNDO <em>CUENTA.</em></h2><p>El personaje corre automáticamente. Tus reflejos deciden cuánto dura la huida.</p></div>
+      <div class="mechanics-grid"><div class="mechanic-card reveal"><span class="card-icon">↗</span><small>01 / MOVIMIENTO</small><h3>CARRERA CONTINUA</h3><p>El protagonista avanza automáticamente por la avenida, sin detenerse.</p></div><div class="mechanic-card reveal"><span class="card-icon">↑</span><small>02 / OBSTÁCULO BAJO</small><h3>SALTO</h3><p>Presiona la flecha arriba para saltar cajas, barricadas y bloques de construcción.</p></div><div class="mechanic-card reveal"><span class="card-icon">↓</span><small>03 / OBSTÁCULO ALTO</small><h3>AGACHARSE</h3><p>Presiona la flecha abajo para pasar bajo estructuras, barras y señales elevadas.</p></div><div class="mechanic-card reveal"><span class="card-icon">⚠</span><small>04 / AMENAZAS</small><h3>AZAR Y COLISIONES</h3><p>Los obstáculos aparecen en intervalos variables. Una colisión puede costarte una vida.</p></div><div class="mechanic-card reveal"><span class="card-icon">◈</span><small>05 / PROGRESIÓN</small><h3>MÁS VELOCIDAD</h3><p>A medida que pasa el tiempo, el ritmo aumenta y el margen de reacción disminuye.</p></div><div class="mechanic-card reveal"><span class="card-icon">✕</span><small>06 / FINAL DE PARTIDA</small><h3>RÉCORD O DERROTA</h3><p>La puntuación crece con la supervivencia. Sin vidas, aparece el final de la partida.</p></div></div>
+      <div class="controls reveal"><div><span class="section-no">CONTROLES / TECLADO</span><h3>NO TE DETENGAS.</h3></div><div class="key-pair"><kbd>↑</kbd><span>SALTAR<br><small>Obstáculos bajos</small></span></div><div class="key-pair"><kbd>↓</kbd><span>AGACHARSE<br><small>Obstáculos altos</small></span></div><p>Controles definidos en la Evaluación 2. Las teclas adicionales dependen de la compilación publicada.</p></div>
+    </div></section>
+
+    <section id="datos" class="section data-section"><div class="container"><div class="section-heading reveal"><span class="section-no">04 / INFORMACIÓN DEL PROYECTO</span><h2>EL JUEGO EN <em>DATOS.</em></h2><p>Ficha técnica, reglas esenciales y ciclo de supervivencia.</p></div>
+      <div class="data-grid"><div class="data-number reveal"><strong>3D</strong><span>ENTORNO URBANO</span></div><div class="data-number reveal"><strong>02</strong><span>TIPOS DE OBSTÁCULO</span></div><div class="data-number reveal"><strong>∞</strong><span>CARRERA CONTINUA</span></div><div class="data-number reveal"><strong>01</strong><span>JUGADOR</span></div></div>
+      <div class="information-grid"><div class="info-box reveal"><h3>FICHA TÉCNICA <span>// 01</span></h3><dl><div><dt>Nombre provisional</dt><dd>Carrera Infinita 3D – Ciudad Urbana Distópica</dd></div><div><dt>Género</dt><dd>Endless runner 3D / arcade</dd></div><div><dt>Motor</dt><dd>Unity</dd></div><div><dt>Plataforma</dt><dd>Navegador / Unity WebGL</dd></div><div><dt>Perspectiva</dt><dd>Tercera persona fija o lateral</dd></div><div><dt>Ambientación</dt><dd>Ciudad nocturna distópica</dd></div><div><dt>Objetivo</dt><dd>Mayor puntuación y récord personal</dd></div></dl></div><div class="info-box loop-box reveal"><h3>CICLO DE JUEGO <span>// 02</span></h3><ol><li><b>01 / CORRE</b><span>Avanza por la ciudad de forma automática.</span></li><li><b>02 / IDENTIFICA</b><span>Distingue entre obstáculos bajos y altos.</span></li><li><b>03 / REACCIONA</b><span>Salta o agáchate en el momento preciso.</span></li><li><b>04 / SOBREVIVE</b><span>Acumula puntos y supera tu mejor marca.</span></li></ol><div class="warning-note">⚠ La guía de Evaluación 2 no fija un número definitivo de vidas ni una puntuación objetivo específica; esos valores se verifican dentro del juego.</div></div></div>
+    </div></section>
+
+    <section id="jugar" class="section play-section" aria-labelledby="play-title">
+      <div class="play-backdrop" aria-hidden="true"></div>
+      <div class="container play-content">
+        <div class="play-intro reveal">
+          <span class="section-no">05 / ZONA DE JUEGO · ACCESO WEBGL</span>
+          <h2 id="play-title">LA CIUDAD TE <em>ESPERA.</em></h2>
+          <p>La partida comienza aquí mismo. No necesitas salir de este portal.</p>
+        </div>
+
+        <div class="game-shell reveal" id="game-shell" aria-label="Área de juego de Ciudad Sangrienta">
+          <div class="game-topbar">
+            <span class="game-live"><span class="status-dot" aria-hidden="true"></span> SECTOR CERO <span class="game-topbar-divider">//</span> RUNNER URBANO</span>
+            <span id="game-state" aria-live="polite">SISTEMA EN ESPERA</span>
+          </div>
+
+          <div class="game-stage" id="game-stage">
+            <div class="game-vignette" aria-hidden="true"></div>
+            <div class="game-drip" aria-hidden="true"></div>
+
+            <div class="game-cover" id="game-cover">
+              <div class="game-cover-inner">
+                <span class="game-warning">⚠ ADVERTENCIA / ZONA RESTRINGIDA</span>
+                <h3>NO HAY <span>SALIDA</span></h3>
+                <p>Entra en la ciudad desolada, esquiva lo que se cruce en tu camino y supera tu propio récord.</p>
+                <button class="btn btn-primary btn-large" type="button" id="start-game">▶ INICIAR PARTIDA AQUÍ</button>
+                <small>El juego de Unity se carga dentro de este recuadro.</small>
+              </div>
+            </div>
+
+            <iframe
+              class="game-iframe"
+              id="game-frame"
+              title="Runner Urbano - videojuego Unity WebGL integrado"
+              data-src="https://aquamarine-pothos-2552f7.netlify.app/"
+              allow="fullscreen; autoplay; gamepad"
+              allowfullscreen
+              tabindex="0"
+              referrerpolicy="strict-origin-when-cross-origin"
+            ></iframe>
+
+            <div class="game-loading" id="game-loading" role="status" aria-live="polite" hidden>
+              <div class="game-loader" aria-hidden="true"></div>
+              <strong>ENTRANDO EN LA CIUDAD...</strong>
+              <span>Descargando la experiencia Unity WebGL</span>
+            </div>
+          </div>
+
+          <div class="game-toolbar">
+            <div class="game-control-guide"><kbd>↑</kbd> SALTAR <span class="toolbar-separator">·</span> <kbd>↓</kbd> AGACHARSE <span class="toolbar-separator">·</span> HAZ CLIC EN EL JUEGO PARA ACTIVAR LAS TECLAS</div>
+            <div class="game-buttons">
+              <button class="game-tool-btn" id="fullscreen-game" type="button" disabled aria-label="Expandir el juego a pantalla completa">⛶ PANTALLA COMPLETA</button>
+              <button class="game-tool-btn" id="reload-game" type="button" disabled aria-label="Volver a cargar el juego">↻ REINICIAR CARGA</button>
+              <button class="game-tool-btn game-stop" id="stop-game" type="button" disabled aria-label="Cerrar el juego integrado">✕ CERRAR</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="requirements"><span>✓ Juego integrado en la página</span><span>✓ Navegador con WebGL</span><span>✓ Conexión a Internet</span><span>✓ Teclado recomendado</span></div>
+        <p class="play-note">Si la pantalla no responde, haz clic dentro del juego para darle el foco. Si el servidor impide la visualización incrustada, puedes <a href="https://aquamarine-pothos-2552f7.netlify.app/" target="_blank" rel="noopener noreferrer">abrir el juego original como alternativa</a>. Los marcos y efectos de sangre pertenecen a este portal; la escena interna de Unity conserva sus gráficos originales.</p>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-layout"><div><b>✕ CIUDAD SANGRIENTA</b><p>Portal promocional de Carrera Infinita 3D – Ciudad Urbana Distópica · Game Development · 2026</p><p>Equipo: Harold Abdel Carpio Santander · Alexander Condori Nina · Pablo Alejandro Zaconeta Guanca</p></div><a href="#inicio">VOLVER ARRIBA ↑</a></div></footer>
+  <script src="script.js"></script>
+</body></html>
