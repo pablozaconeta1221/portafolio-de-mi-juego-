@@ -52,3 +52,207 @@
 @media(max-width:720px){.play-section{padding:77px 0 85px;}.game-stage{min-height:370px;aspect-ratio:4/5;}.game-topbar{padding:12px;font-size:9px;letter-spacing:1px;}.game-topbar-divider{padding:0 2px;}.game-control-guide{width:100%;}.game-toolbar{padding:12px;}.game-buttons{width:100%;}.game-tool-btn{flex:1;}.game-cover h3{font-size:70px;}.play-intro h2{font-size:clamp(58px,12vw,85px);}}
 @media(max-width:430px){.game-stage{min-height:330px;aspect-ratio:3/4;}.game-cover-inner{padding:14px;}.game-cover h3{font-size:57px;margin:14px 0;}.game-cover p{font-size:12px;}.game-cover .btn-large{font-size:12px;padding:15px 18px;margin:14px 0;}.game-tool-btn{font-size:9px;padding:6px 5px;}.game-topbar{font-size:8px;}.game-topbar #game-state{font-size:8px;}}
 @media(prefers-reduced-motion:reduce){.game-loader{animation:none}.game-iframe{transition:none}}
+
+
+/* =====================================================================
+   CIUDAD SANGRIENTA / EXPEDIENTE 002 — LABERINTO 3D
+   Mantiene la identidad negra/roja del Runner y suma acentos verde
+   tóxico, amarillo de recolección y violeta de los perseguidores.
+   ===================================================================== */
+:root{--maze-green:#9af46c;--maze-yellow:#ffd06a;--maze-purple:#a18bf5;--maze-dim:#aebbb4}
+.nav-lab{color:#d4f4ce!important}.nav-lab:hover{color:var(--maze-green)!important}
+.hero-second-game{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:18px 0 0;color:#b8a8a8;font-size:10px;font-weight:700;letter-spacing:1.2px}
+.hero-second-game a{color:var(--maze-green);border-bottom:1px solid #8bd2697d;padding:5px 0}
+.hero-second-game a:hover{color:#fff}
+.game-selector{background:linear-gradient(180deg,#0b0b0c,#100e12);border-block:1px solid #49333a;padding:22px 0}
+.game-selector-layout{display:grid;grid-template-columns:1.18fr 1fr 1fr;gap:13px;align-items:stretch}
+.selector-kicker{padding:9px 26px 6px 0;display:flex;justify-content:center;flex-direction:column}
+.selector-kicker h2{font-size:clamp(29px,3vw,41px);line-height:1.03;margin:8px 0;color:#fff}
+.selector-kicker h2 em{font-style:normal;color:var(--red)}
+.selector-kicker p{font-size:12px;line-height:1.5;color:#a7979c;margin:0}
+.selector-game{position:relative;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:155px;padding:21px 38px 21px 24px;border:1px solid #69303a;transition:transform .2s,border-color .2s,background .2s;overflow:hidden}
+.selector-game:hover{transform:translateY(-3px);border-color:#f03d58}
+.selector-runner{background:radial-gradient(circle at 100% 110%,#b6172a64,transparent 60%),#1c0e13}
+.selector-labyrinth{background:radial-gradient(circle at 99% 110%,#466f3a63,transparent 65%),#0f1a16;border-color:#426447}
+.selector-labyrinth:hover{border-color:#9af46c}
+.selector-count{font:800 10px Inter,Arial,sans-serif;letter-spacing:2px;color:#f09ba7;margin-bottom:10px}
+.selector-labyrinth .selector-count{color:var(--maze-green)}
+.selector-game b{font:900 30px/1 'Barlow Condensed',Impact,sans-serif;letter-spacing:.4px;color:#fff;display:block}
+.selector-game b span{display:block;color:#f25a68}.selector-labyrinth b span{color:var(--maze-green)}
+.selector-game small{font-size:9px;letter-spacing:1px;font-weight:700;margin-top:11px;color:#c1b4b4}
+.selector-arrow{position:absolute;right:18px;top:18px;font-size:22px;color:#ed5166}
+.selector-labyrinth .selector-arrow{color:var(--maze-green)}
+.footer-links{display:flex;gap:22px;flex-wrap:wrap;justify-content:flex-end}
+.footer-links a{font-size:11px;letter-spacing:1.2px;color:var(--red);font-weight:900;white-space:nowrap}
+.footer-links a:hover{color:#fff}
+.maze-universe{position:relative;background:#090d10;color:#eaf0ec;overflow:hidden;isolation:isolate}
+.maze-universe .section{scroll-margin-top:78px}
+.maze-universe .maze-hero{padding:104px 0 0;position:relative;overflow:hidden}
+.maze-blood-edge{height:15px;position:absolute;z-index:4;top:0;left:0;right:0;pointer-events:none;background:linear-gradient(to bottom,#9d0519 0,#510613 6px,transparent 13px),radial-gradient(ellipse 9px 21px at 13% 0,#8a0a1d 97%,transparent 100%),radial-gradient(ellipse 10px 25px at 27% 0,#920e20 97%,transparent 100%),radial-gradient(ellipse 10px 30px at 77% 0,#6c081b 97%,transparent 100%)}
+.maze-atmosphere{position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse 800px 420px at 76% 48%,#47673a45,transparent 73%),radial-gradient(ellipse 850px 520px at 12% 14%,#72142647,transparent 75%),linear-gradient(180deg,#100d12dd,#0a0d11f0),url('assets/ciudad-desolada.svg') center/cover;opacity:1}
+.maze-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.08fr);gap:56px;align-items:center;padding-bottom:104px;position:relative}
+.maze-breadcrumb{color:#afc2b6;font:800 10px/1.8 Inter,Arial,sans-serif;letter-spacing:2px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.maze-breadcrumb>span:not(.maze-pulse){color:var(--red)}
+.maze-pulse{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--maze-green);box-shadow:0 0 16px #9af46c;animation:pulse 1.8s infinite}
+.maze-tag{display:inline-flex;padding:7px 13px;margin:30px 0 11px;border:1px solid #5c8a5b;background:#132b1bc4;color:var(--maze-green);font-size:10px;letter-spacing:1.7px;font-weight:900}
+.maze-hero h2{font-family:'Barlow Condensed',Impact,sans-serif;font-size:clamp(80px,9vw,139px);line-height:.8;letter-spacing:-1.3px;margin:22px 0 23px;color:#faf8f3;text-shadow:6px 9px 0 #050709}
+.maze-hero h2 span{color:var(--maze-green);text-shadow:4px 6px 0 #203f22,0 0 42px #70a85a4a}
+.maze-manifesto{font:900 clamp(24px,3.1vw,40px)/1.04 'Barlow Condensed',Impact,sans-serif;letter-spacing:2px;margin-bottom:18px;color:#fbdddd}
+.maze-description{color:#c9cdc8;font:400 15px/1.85 Inter,Arial,sans-serif;max-width:540px}
+.maze-hero-actions{display:flex;gap:13px;flex-wrap:wrap;margin:28px 0}
+.maze-primary-btn{background:linear-gradient(115deg,#a5f36f,#5bcb62);color:#0c1c11;border:none;box-shadow:0 8px 40px #70e65a27;font-family:Inter,Arial,sans-serif;cursor:pointer}
+.maze-primary-btn:hover{background:linear-gradient(115deg,#c0ffa0,#74eb73)}
+.maze-ghost-btn{background:#161b1d;border:1px solid #637166;color:#f4f7f3}
+.maze-hero-mini{display:flex;flex-wrap:wrap;gap:32px;border-top:1px solid #3c5745;padding-top:23px;margin-top:31px}
+.maze-hero-mini span{display:flex;align-items:baseline;gap:9px;font-size:10px;letter-spacing:1px;color:#c3d1c5;font-weight:800}
+.maze-hero-mini b{font:900 40px 'Barlow Condensed',Impact,sans-serif;color:#fff}
+.maze-hero-visual{position:relative;border:1px solid #638c63;background:#0a0e11;box-shadow:0 0 0 8px #121519,0 0 0 9px #364837,0 28px 100px #000a,0 0 75px #6fab5533;transform:rotate(1.2deg)}
+.maze-hero-visual.visible{transform:rotate(1.2deg)}
+.maze-visual-top,.maze-visual-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:10px;letter-spacing:1.3px;font-weight:900}
+.maze-visual-top{padding:15px 19px;background:#1b2424;color:#cfdcd1;border-bottom:1px solid #345c44}
+.maze-red-live{color:#ff546d}
+.maze-hero-visual img{width:100%;height:auto;aspect-ratio:1.25;object-fit:cover;object-position:center}
+.maze-visual-bottom{padding:14px 16px;background:#131d19;justify-content:flex-start;gap:18px;color:#c6d7c7}
+.maze-visual-bottom span,.maze-map-note span{display:inline-flex;align-items:center;gap:8px}
+.legend-dot{width:9px;height:9px;flex:0 0 9px;border-radius:50%;display:inline-block}
+.legend-player{background:#73f37d;box-shadow:0 0 8px #73f37d}
+.legend-enemy{background:#e14f71;box-shadow:0 0 8px #e14f71}
+.legend-points{background:#ffd06a;box-shadow:0 0 8px #ffd06a}
+.legend-exit{background:#9be5ca;box-shadow:0 0 8px #9be5ca}
+.maze-side-label{position:absolute;top:14%;right:-26px;writing-mode:vertical-rl;color:#ff5573;background:#19090e;padding:10px 5px;font:900 8px Inter,Arial,sans-serif;letter-spacing:1px}
+.maze-ticker{background:linear-gradient(100deg,#831b28,#500d1b,#971d2c);border-block:1px solid #fa445b;padding:13px 0;overflow:hidden;white-space:nowrap}
+.maze-ticker>div{display:flex;justify-content:center;gap:25px;font:900 13px Inter,Arial,sans-serif;letter-spacing:2.3px;color:#ffe9e8}
+.maze-ticker span{color:#f47d8a}
+.maze-section-head{max-width:865px;margin-bottom:39px}
+.maze-overline{font:900 11px/1.6 Inter,Arial,sans-serif;letter-spacing:3.5px;color:var(--maze-green)}
+.maze-section-head h3,.maze-character-text h3{font-size:clamp(55px,6.2vw,89px);line-height:.9;letter-spacing:-.3px;color:#fff;margin:20px 0}
+.maze-section-head h3 em,.maze-character-text h3 em{font-style:normal;color:var(--maze-green)}
+.maze-section-head>p{font-size:15px;line-height:1.75;color:#bdc7bf;max-width:720px}
+.maze-story{background:linear-gradient(180deg,#0b1013,#121118)}
+.maze-chapter-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.maze-chapter{border:1px solid #47323c;background:linear-gradient(170deg,#1c1920,#101317);padding:25px 22px 26px;position:relative;overflow:hidden;min-height:290px}
+.maze-chapter::after{content:'';position:absolute;bottom:0;left:0;width:100%;height:2px;background:linear-gradient(90deg,#dc253f,transparent)}
+.chapter-digit{display:block;font:900 76px/.8 'Barlow Condensed',Impact,sans-serif;color:#64222e;margin-bottom:30px}
+.maze-chapter-type{font-size:9px;color:var(--maze-green);font-weight:900;letter-spacing:1.6px;line-height:1.7}
+.maze-chapter h4,.maze-mechanic-card h4{font:900 27px/1.04 'Barlow Condensed',Impact,sans-serif;margin:13px 0 11px}
+.maze-chapter p,.maze-mechanic-card p{font-size:12px;line-height:1.8;color:#bcc6bc;margin-bottom:0}
+.maze-character{background:radial-gradient(ellipse at 18% 60%,#355e3345,transparent 45%),#0d1313}
+.maze-character-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1fr);align-items:center;gap:84px}
+.maze-character-frame{position:relative;height:575px;max-width:520px;background:radial-gradient(circle at 50% 60%,#3a693f88,#0e1614 65%);border:1px solid #4e8250;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;box-shadow:inset 0 0 160px #14251b}
+.maze-character-frame::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 90px 16px #101116;pointer-events:none}
+.maze-portrait-radar{position:absolute;border:1px dashed #81dd7655;border-radius:50%;width:93%;height:80%;top:10%;left:3%;box-shadow:0 0 0 28px #7fe36b0a,0 0 0 50px #7fe36b09}
+.maze-character-frame img{height:98%;position:relative;z-index:1;filter:drop-shadow(3px 12px 26px #000c);mix-blend-mode:lighten}
+.maze-frame-top,.maze-frame-bottom{position:absolute;z-index:2;left:16px;right:16px;padding:12px;font-size:10px;letter-spacing:1.5px;font-weight:900;color:#d4fad3;background:#0b1315bf}
+.maze-frame-top{top:14px;right:auto;border-left:3px solid var(--maze-green)}
+.maze-frame-bottom{bottom:15px;display:flex;justify-content:space-between;gap:12px}
+.maze-frame-bottom span{color:var(--maze-green)}
+.maze-character-text h3{font-size:clamp(56px,5.6vw,82px)}
+.maze-character-text>p{font-size:14px;line-height:1.9;color:#c1c8c1;max-width:570px}
+.maze-character-attributes{margin-top:28px;border-top:1px solid #395242}
+.maze-character-attributes>div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #2e4537;padding:16px 0;align-items:start}
+.maze-character-attributes span{font-size:10px;color:#9af46c;letter-spacing:1.5px;font-weight:900}
+.maze-character-attributes strong{text-align:right;font-size:12px;color:#f7f9f4}
+.maze-character-warning{margin-top:27px;padding:18px 20px;background:#3e1019a6;border-left:3px solid #ff4560;font-size:12px;line-height:1.7;color:#ffd8df}
+.maze-mechanics{background:#0b0d12}
+.maze-mechanic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.maze-mechanic-card{position:relative;padding:27px;min-height:237px;background:linear-gradient(145deg,#191b20,#111619);border:1px solid #34493b;overflow:hidden}
+.maze-mechanic-card::after{content:'';position:absolute;right:0;top:0;width:55px;height:2px;background:var(--maze-green)}
+.maze-mech-icon{display:block;font-size:34px;color:var(--maze-green);height:51px;font-weight:900}
+.maze-card-order{display:block;font-size:10px;color:#8fba9a;font-weight:900;letter-spacing:2px;margin:9px 0}
+.maze-mechanic-card h4{font-size:30px;color:#fff}
+.maze-control-panel{display:flex;align-items:center;gap:35px;margin-top:26px;background:linear-gradient(100deg,#182a22,#111a1b);border:1px solid #56765c;padding:27px 34px}
+.maze-control-title{flex:1}
+.maze-control-title strong{display:block;font:900 32px/1 'Barlow Condensed',Impact,sans-serif;color:#fff;margin-top:10px}
+.maze-cross-keys{display:grid;grid-template-columns:repeat(3,46px);grid-template-rows:repeat(2,45px);gap:4px;justify-content:center;flex-shrink:0}
+.maze-cross-keys kbd{display:grid;place-items:center;font-size:24px;font-weight:900;background:#081412;border:1px solid #81b37d;border-radius:4px;color:#d9ffe0;box-shadow:0 4px 0 #040808}
+.maze-cross-keys .maze-key-up{grid-column:2;grid-row:1}
+.maze-cross-keys kbd:nth-child(2){grid-column:1;grid-row:2}
+.maze-cross-keys kbd:nth-child(3){grid-column:2;grid-row:2}
+.maze-cross-keys kbd:nth-child(4){grid-column:3;grid-row:2}
+.maze-control-explain{flex:1.3;display:flex;flex-direction:column;gap:6px}
+.maze-control-explain>strong{font-size:12px;letter-spacing:1.2px;color:#f7fff7}
+.maze-control-explain>span{font-size:12px;line-height:1.7;color:#b5c3b6}
+.maze-reset{margin-top:11px;display:flex;gap:12px;align-items:center;font-size:11px;color:#e9faeb}
+.maze-reset kbd{border:1px solid #84c17f;border-radius:4px;padding:7px 11px;font-weight:900;color:var(--maze-green)}
+.maze-information{background:linear-gradient(180deg,#111719,#0e1115)}
+.maze-numbers{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:28px}
+.maze-number{border:1px solid #385d41;background:#151f1d;padding:20px 10px;text-align:center;min-height:145px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.maze-number strong{font:900 clamp(44px,5.7vw,79px)/1 'Barlow Condensed',Impact,sans-serif;color:#9af46c}
+.maze-number span{font-size:10px;font-weight:900;letter-spacing:1px;color:#c5d8c9;margin-top:10px;line-height:1.5}
+.maze-map-layout{display:grid;grid-template-columns:minmax(0,1.18fr) minmax(0,.82fr);gap:18px;align-items:stretch}
+.maze-map-panel{background:#0d1518;border:1px solid #52705a;display:flex;flex-direction:column}
+.maze-panel-header{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;color:#9feeab;font:900 10px Inter,Arial,sans-serif;letter-spacing:1.3px;padding:17px 18px;border-bottom:1px solid #324d3b;background:#1a2925}
+.maze-panel-header span:last-child{color:#b7bdb7}
+.maze-map-panel>img{width:100%;height:auto;object-fit:contain;flex:1}
+.maze-map-note{display:flex;justify-content:center;flex-wrap:wrap;gap:23px;background:#14221b;padding:13px 15px;font-size:9px;letter-spacing:1.1px;font-weight:800;color:#d8e7d9;border-top:1px solid #324d3b}
+.maze-facts-panel{padding:25px 28px;background:linear-gradient(150deg,#1c2623,#111619);border:1px solid #425a49}
+.maze-facts-panel h4{display:flex;justify-content:space-between;gap:12px;color:white;font:900 32px 'Barlow Condensed',Impact,sans-serif;margin:2px 0 15px}
+.maze-facts-panel h4 small{font:900 10px Inter,Arial,sans-serif;color:var(--maze-green)}
+.maze-facts-panel dl{margin:0}
+.maze-facts-panel dl>div{display:flex;justify-content:space-between;gap:18px;padding:11px 0;border-bottom:1px solid #36433a;align-items:start}
+.maze-facts-panel dt{color:#a1b7a4;font-size:11px}
+.maze-facts-panel dd{margin:0;font-size:11px;text-align:right;color:#f1f9ef;max-width:63%;font-weight:700}
+.maze-rules-caption{margin-top:22px;padding:15px;background:#39131eb8;border-left:3px solid #f2445b;color:#fddce4;line-height:1.85;font-size:11px;font-weight:700}
+.maze-process{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:25px;padding:27px 20px;border:1px dashed #54765b}
+.maze-process>div{min-width:0;display:flex;flex-direction:column;gap:6px;flex:1;text-align:center}
+.maze-process>div>span{color:var(--maze-green);font:900 22px 'Barlow Condensed',Impact,sans-serif}
+.maze-process b{color:white;font:900 24px 'Barlow Condensed',Impact,sans-serif}
+.maze-process small{color:#a8b7a9;font-size:10px}
+.maze-process>i{color:#df6e7e;font-size:23px;font-style:normal}
+.maze-play{padding-block:110px 125px;background:radial-gradient(ellipse at 50% 15%,#39572b44,transparent 56%),linear-gradient(#141014b7,#0d1014e7),url('assets/ciudad-desolada.svg') center/cover;text-align:center}
+.maze-play-intro{max-width:800px;margin:0 auto 35px}
+.maze-play-intro h3{font-size:clamp(65px,9vw,124px)}
+.maze-play-intro p{margin:0 auto}
+.maze-game-shell{border-color:#79c271;box-shadow:0 0 0 7px #142118,0 0 0 8px #345b39,0 22px 80px #0009,0 0 70px #5a9d522e}
+.maze-game-shell::before{background:linear-gradient(90deg,#1b4e27,#b7ff89,#7b2334)}
+.maze-game-shell .game-topbar{background:linear-gradient(90deg,#17291e,#13171e);border-color:#496f51}
+.maze-game-shell .game-live .status-dot{background:var(--maze-green);box-shadow:0 0 10px var(--maze-green)}
+.maze-game-shell .game-stage{background:radial-gradient(ellipse at 50% 50%,#406a3c4f,#071016 72%),url('assets/plano-laberinto.svg') center/cover}
+.maze-game-shell .game-vignette{box-shadow:inset 0 0 18px 5px #22572d,inset 0 0 90px 25px #081b0c77}
+.maze-game-shell .game-drip{opacity:.9}
+.maze-game-cover{background:linear-gradient(#0a1014c8,#050808e9),url('assets/plano-laberinto.svg') center/cover}
+.maze-game-cover h4{font:900 clamp(62px,8vw,110px)/.88 'Barlow Condensed',Impact,sans-serif;color:#f8f5f0;margin:22px 0;text-shadow:4px 5px #07110b}
+.maze-game-cover h4 span{display:block;color:var(--maze-green);text-shadow:2px 3px #14421d}
+.maze-game-cover .game-cover-inner>p{font-size:14px;color:#d7e6d9;line-height:1.85}
+.maze-game-cover .game-warning{color:#ff7e95}
+.maze-game-cover .maze-start-btn{padding:20px 35px;font-size:13px;display:inline-flex;margin:19px auto}
+.maze-game-shell .game-toolbar{background:linear-gradient(120deg,#1a2b21,#101719);border-top-color:#5a8b60}
+.maze-game-shell .game-control-guide kbd{border-color:#82a87d}
+.maze-game-shell .game-tool-btn{border-color:#668d67;background:#1b3925}
+.maze-game-shell .game-tool-btn:hover:not(:disabled){background:#3e6c43}
+.maze-game-shell .game-stop{background:#261319;border-color:#8a3846}
+.maze-requirements{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;margin-top:28px;font-size:11px;color:#e1f4de}
+.maze-embed-note{color:#b1c1b4;font-size:11px;line-height:1.9;max-width:860px;margin:23px auto 0}
+.maze-embed-note a{color:#b6f6a4;text-decoration:underline;text-underline-offset:3px}
+.maze-universe a:focus-visible,.maze-universe button:focus-visible{outline:2px solid #b9ffa8;outline-offset:5px}
+@media(max-width:1110px){.nav{gap:12px}.nav a{font-size:10px}.maze-hero-grid{gap:30px}.maze-hero h2{font-size:clamp(74px,9.5vw,117px)}.maze-character-grid{gap:35px}.maze-numbers{gap:8px}}
+@media(max-width:870px){.game-selector-layout{grid-template-columns:repeat(2,1fr)}.selector-kicker{grid-column:span 2;padding:7px 0}.maze-hero-grid,.maze-character-grid,.maze-map-layout{grid-template-columns:1fr}.maze-hero-copy{max-width:700px}.maze-hero-visual{max-width:700px;width:100%;margin:0 auto}.maze-hero h2{font-size:110px}.maze-chapter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.maze-character-frame{width:100%;margin:0 auto}.maze-mechanic-grid{grid-template-columns:repeat(2,1fr)}.maze-facts-panel{max-width:none}.maze-control-panel{gap:20px}}
+@media(max-width:720px){.nav{gap:0}.game-selector{padding:24px 0}.game-selector-layout{gap:12px}.maze-universe .section{padding-top:76px;padding-bottom:78px}.maze-universe .maze-hero{padding-top:82px;padding-bottom:0}.maze-hero-grid{gap:42px;padding-bottom:70px}.maze-ticker>div{font-size:10px;letter-spacing:1px;gap:12px}.maze-section-head h3{font-size:clamp(50px,11vw,80px)}.maze-numbers{grid-template-columns:repeat(3,1fr)}.maze-number{min-height:132px}.maze-number strong{font-size:62px}.maze-character-frame{height:490px}.maze-control-panel{flex-wrap:wrap}.maze-control-title{flex-basis:100%}.maze-control-explain{flex:1}.maze-game-shell .game-stage{aspect-ratio:4/5;min-height:370px}.maze-game-cover h4{font-size:clamp(62px,12vw,95px)}.footer-links{justify-content:flex-start}}
+@media(max-width:500px){.selector-game{padding:20px 13px;min-height:155px}.selector-game b{font-size:23px}.selector-game small{font-size:8px;letter-spacing:.3px}.selector-arrow{right:9px;top:9px;font-size:18px}.selector-count{font-size:9px}.maze-hero h2{font-size:clamp(68px,15vw,95px)}.maze-breadcrumb{font-size:9px;gap:6px;letter-spacing:1px}.maze-hero-mini{gap:14px}.maze-hero-mini b{font-size:35px}.maze-hero-mini span{font-size:8px}.maze-hero-visual{transform:none}.maze-hero-visual.visible{transform:none}.maze-side-label{right:-1px;font-size:6px}.maze-visual-top,.maze-visual-bottom{font-size:8px}.maze-visual-bottom{gap:11px}.maze-manifesto{font-size:27px}.maze-description{font-size:13px}.maze-hero-actions .btn{width:100%}.maze-chapter-grid,.maze-mechanic-grid{grid-template-columns:1fr}.maze-chapter{min-height:0}.maze-character-frame{height:405px}.maze-character-attributes>div{flex-direction:column;gap:9px}.maze-character-attributes strong{text-align:left}.maze-control-panel{padding:20px}.maze-cross-keys{margin:auto}.maze-control-explain{flex-basis:100%}.maze-numbers{grid-template-columns:repeat(2,1fr)}.maze-number{min-height:118px}.maze-number strong{font-size:57px}.maze-number:last-child{grid-column:span 2}.maze-facts-panel{padding:20px}.maze-map-note{gap:12px;font-size:8px}.maze-process{flex-wrap:wrap}.maze-process>div{flex-basis:40%}.maze-process>i:nth-of-type(2){display:none}.maze-process b{font-size:19px}.maze-process small{font-size:9px}.maze-play-intro h3{font-size:clamp(58px,13.5vw,89px)}.maze-game-shell .game-stage{min-height:330px;aspect-ratio:3/4}.maze-game-cover h4{font-size:clamp(54px,13vw,85px)}.maze-game-cover .game-cover-inner>p{font-size:12px}.maze-requirements{gap:12px;font-size:10px}}
+@media(prefers-reduced-motion:reduce){.maze-pulse{animation:none}}
+
+/* Secondary navigation for the second game */
+.maze-subnav{position:relative;z-index:4;border-block:1px solid #3f6947;background:#122119}
+.maze-subnav-inner{display:flex;gap:30px;align-items:center;justify-content:flex-end;min-height:65px;flex-wrap:wrap}
+.maze-subnav-title{font:900 11px Inter,Arial,sans-serif;letter-spacing:2px;color:var(--maze-green);margin-right:auto}
+.maze-subnav a{font:900 11px Inter,Arial,sans-serif;color:#d7e5d8;text-transform:uppercase;letter-spacing:1px}
+.maze-subnav a:hover{color:var(--maze-green)}
+.maze-subnav .maze-subnav-play{color:#081a0d;background:var(--maze-green);padding:13px 18px}
+.maze-subnav .maze-subnav-play:hover{color:#051107;background:#c7ffa8}
+@media(max-width:820px){.maze-subnav-inner{gap:20px;justify-content:center;padding-block:15px}.maze-subnav-title{flex-basis:100%;text-align:center;margin:0}}
+@media(max-width:500px){.maze-hero h2{font-size:clamp(53px,13.8vw,67px)}.maze-subnav-inner{gap:11px 16px;justify-content:center}.maze-subnav a{font-size:10px}.maze-subnav .maze-subnav-play{padding:10px 12px}}
+
+/* Enemy patrol routes — technical infographic for classroom presentation */
+.maze-ai-info{margin-top:24px;background:linear-gradient(140deg,#191b22,#10181a);border:1px solid #42644b;padding:25px 27px}
+.maze-ai-head{display:flex;gap:20px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:22px}
+.maze-ai-head strong{font:900 24px 'Barlow Condensed',Impact,sans-serif;color:#f6fff5}
+.maze-ai-routes{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}
+.maze-ai-routes article{padding:17px;border:1px solid #4e3b45;background:#0c1318}
+.ai-enemy-id{display:block;font-weight:900;font-size:10px;letter-spacing:2px;margin-bottom:12px}
+.ai-enemy-one{color:#fb7f8e}.ai-enemy-two{color:#b9a7ff}
+.maze-ai-routes b{font:900 23px/1.3 'Barlow Condensed',Impact,sans-serif;color:#f2f4f4;letter-spacing:1.2px}
+.maze-ai-routes b span{color:#98c095;padding:0 5px}
+.maze-ai-routes p{color:#bdc5bf;font-size:11px;line-height:1.7;margin:9px 0 0}
+.maze-ai-footnote{margin:18px 0 0;color:#c5d1c7;font-size:11px;line-height:1.85}
+.maze-ai-footnote strong{color:#b0f0a2}
+@media(max-width:700px){.maze-ai-routes{grid-template-columns:1fr}.maze-ai-head strong{font-size:20px}}
