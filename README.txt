@@ -1,29 +1,67 @@
-PORTAL CIUDAD SANGRIENTA — JUEGO INTEGRADO
+CIUDAD SANGRIENTA — PORTAL COMPLETO DE 2 VIDEOJUEGOS
+========================================================
 
-¿Qué se modificó?
-- El videojuego Runner Urbano se incrusta en el portal mediante un iframe HTML.
-- COMENZAR A JUGAR (inicio) y JUGAR AHORA (menú) te llevan a #jugar y cargan el juego en la misma página.
-- En la sección de juego puedes iniciar, recargar, cerrar y activar pantalla completa.
-- Se añadió un marco temático con brillo rojo y manchas de sangre alrededor del visor.
-- Se conserva toda la web: Historia, Personaje, Mecánicas, Datos y el protagonista de la imagen original.
+PROYECTO
+Portal web promocional de Unity WebGL, preparado para Visual Studio Code.
+Incluye 2 experiencias en una misma página:
+  1) Carrera Infinita 3D / Runner Urbano (Unidad 2)
+  2) Ciudad Sangrienta — Laberinto 3D (Unidad 3)
 
-CÓMO PROBAR EN VS CODE
-1. Extrae el ZIP y abre la carpeta Portal_Ciudad_Sangrienta con VS Code.
-2. Abre index.html con Live Server (recomendado).
-3. Haz clic en COMENZAR A JUGAR o JUGAR AHORA.
-4. El juego se verá en el visor, debajo de la sección de Datos.
-5. Haz clic dentro de la escena del juego para usar las flechas del teclado: arriba (salto) y abajo (agacharse).
-6. Si lo deseas usa PANTALLA COMPLETA; usa REINICIAR CARGA para volver a cargar la compilación de Netlify.
+CÓMO ABRIRLO EN VS CODE
+1. Descomprime este archivo ZIP.
+2. Abre la carpeta Portal_Ciudad_Sangrienta en Visual Studio Code.
+3. Haz clic derecho sobre index.html y selecciona Open with Live Server.
+   (Instala la extensión "Live Server" si no la tienes).
+4. Usa el menú superior. El primer juego está en "Jugar Runner".
+5. Haz clic en "Laberinto 3D" para ver la presentación, la ficha
+   del personaje, la historia, mecánicas, datos y el segundo juego.
+6. Haz clic en "JUGAR LABERINTO AQUÍ" o "INICIAR LABERINTO".
+   Unity se abre dentro del mismo portal.
+
+CONTROLES
+RUNNER: Flecha arriba = saltar | Flecha abajo = agacharse.
+LABERINTO: Flechas arriba/abajo/izquierda/derecha = movimiento | R = reiniciar.
+Haz clic dentro del visor para que el juego reciba el teclado.
+
+REQUERIMIENTOS SEGÚN EVALUACIÓN 3
+- Juego inspirado en Pac-Man, en un laberinto 3D de 11 × 9 celdas.
+- Personaje principal heredado de la Unidad 2, estética urbana distópica.
+- 36 puntos que otorgan 10 puntos cada uno.
+- Dos enemigos con patrulla y persecución (pathfinding y raycasting).
+- Visión de 8 unidades, bloqueada por paredes.
+- Victoria: recoger los 36 puntos y alcanzar la salida de F1.
+- Derrota inmediata si uno de los dos enemigos toca al jugador.
+- El plano táctico del portal reproduce el diseño de referencia del documento.
+
+ENLACES CONFIGURADOS
+Runner: https://aquamarine-pothos-2552f7.netlify.app/
+Laberinto: https://illustrious-blancmange-930e81.netlify.app/
 
 ARCHIVOS
-- index.html: secciones y visor iframe Unity integrado.
-- styles.css: diseño sangriento y ciudad desolada, estilos del visor y responsive.
-- script.js: carga del iframe y botones de control del visor.
-- assets/: protagonista.png y ciudad-desolada.svg.
+index.html                 Contenido de todas las secciones, anclas y 2 visores.
+styles.css                 Diseño visual y adaptación a PC y móvil.
+script.js                  Menú, animaciones suaves y control de ambos juegos.
+assets/protagonista.png    Imagen del protagonista proporcionada.
+assets/ciudad-desolada.svg Fondo original del portal.
+assets/plano-laberinto.svg Infografía del laberinto (36 puntos y rutas).
 
-IMPORTANTE
-- Es necesario Internet para cargar https://aquamarine-pothos-2552f7.netlify.app/ .
-- El ZIP contiene el portal, NO el proyecto de Unity ni sus assets WebGL.
-- El diseño sangriento del marco no cambia texturas, enemigos o escenario interno de Unity. Para esos cambios se necesita el proyecto original de Unity y volver a publicarlo.
-- Un servidor externo puede impedir incrustar su contenido por políticas de seguridad (X-Frame-Options o CSP). Si ocurre, existe un enlace de respaldo al juego original bajo el visor. Para garantizar un juego totalmente autónomo en la misma web se necesitan los archivos exportados de Unity WebGL.
-- Para publicar, sube index.html, styles.css, script.js y assets/ al mismo nivel en GitHub Pages, Netlify o Vercel.
+LIMITACIONES IMPORTANTES
+El portal carga los 2 juegos desde sus sitios originales mediante iframe.
+No se incluyen las builds Unity WebGL locales. Se requiere Internet.
+Puede que el proveedor del juego impida la visualización en iframes
+por políticas X-Frame-Options o CSP. Se incluye un enlace de respaldo
+para cada juego, que se abre en otra pestaña solo si el iframe falla.
+Los efectos de terror y sangre se aplican a la WEB y alrededor del visor,
+NO cambian las texturas ni la programación del juego ya publicado.
+Para modificar las escenas internas necesitas los archivos Unity originales.
+Para evitar sobrecargar WebGL, abrir un juego cierra el otro.
+
+PUBLICACIÓN
+Publica TODO el contenido de esta carpeta (index.html, styles.css,
+script.js y assets/) en la raíz del repositorio de GitHub Pages o Netlify.
+Comprueba que las rutas y ambos iframes siguen funcionando públicamente.
+
+FUENTES DEL CONTENIDO
+- GED - 24 - Portal del juego.docx (estructura de portal, secciones y CTA)
+- GED - Unidad 2 - Evaluación.docx (runner y ambiente)
+- GED - Unidad 3 - Evaluación(1).docx (laberinto y especificaciones)
